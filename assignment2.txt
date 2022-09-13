@@ -1,0 +1,194 @@
+//1. Write a program to print unit digit of a given number
+
+#include<stdio.h>
+#include<conio.h>
+int main ()
+{
+    int num=456;
+    num=num%10;
+    printf("unit digit is %d \n",num);
+    return 0;
+}
+
+
+//2. Write a program to print a given number without its last digit.
+#include<stdio.h>
+#include<conio.h>
+int main ()
+{
+    int num=3542,n;
+    n=num/10;
+    printf("%d without it's last digit is %d \n",num,n);
+    return 0;
+}
+
+
+//3. Write a program to swap values of two int variables
+
+#include<stdio.h>
+#include<conio.h>
+int main ()
+{
+    int a,b,temp;
+    printf("enter any two number:\n");
+    scanf("%d%d",&a,&b);
+    printf("before swaping \n%d\n%d \n",a,b);
+    temp=a;
+    a=b;
+    b=temp;
+    printf("\n"),
+    printf("after swaping \n%d\n%d \n",a,b);
+    return 0;
+}
+
+
+
+//4.swap two numbers without using 3rd variable
+
+#include<stdio.h>
+#include<conio.h>
+int main ()
+{
+    int a,b;
+    printf("enter any two number:\n");
+    scanf("%d%d",&a,&b);
+    printf("before swaping \n%d\n%d \n",a,b);
+    b=a+b;
+    a=b-a;
+    b=b-a;
+    printf("\n"),
+    printf("after swaping \n%d\n%d \n",a,b);
+    return 0;
+}
+
+//5. Write a program to input a three-digit number and display the sum of the digits.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int sod=0,num,rem;
+    printf("enter any number \n");
+    scanf("%d",&num);
+    while (num>0)
+     {rem=num%10;
+     sod+=rem;
+     num=num/10;
+     }
+    printf("%d",sod)
+return 0;
+}
+
+
+//6.ascii code for given character
+
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    char ch;
+    printf("enter any character \n");
+    scanf("%c",&ch);
+    printf("%d",ch);
+    return 0;
+}
+
+
+//7. Write a program to find the position of first 1 in LSB.
+
+int main()
+{
+    int num,count=0;
+    printf("enter a number");
+    scanf("%d",&num);
+    while(num!=0)
+      {
+        if(num&1)
+        {
+            printf("%d\n",count);
+            break;
+        }
+        count++;
+        num=num>>1;
+      }
+    getch();
+}
+
+
+//8. Write a program to check whether the given number is even or odd using a bitwise
+operator.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int num;
+    printf("enter a number");
+    scanf("%d",&num);
+    if(num&1)
+        printf("odd");
+    else
+        printf("even");
+    getch();
+}
+
+//10. Write a program to make the last digit of a number stored in a variable as zero.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int x,num;
+    printf("enter any number\n");//x=2345
+    scanf("%d",&x);
+    num=(x/10)*10;
+    printf("%d",num);
+    getch();
+}
+
+//11. Write a program to input a number from the user and also input a digit. Append a digit in the number and print the resulting number.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int num,n;
+    printf("enter a number\n");
+    scanf("%d",&num);
+    printf("enter a digit that you want to append\n");
+    scanf("%d",&n);
+    num=num*10+n;
+    printf("%d\n",num);
+    getch();
+}
+
+//12. Assume price of 1 USD is INR 76.23. Write a program to take the amount in INR and convert it into USD.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    float INR,USD;
+    printf("enter the amount of Indian rupees");
+    scanf("%f",&INR);
+    USD=INR/76.23;
+    printf("USD is %f\n",USD);
+    getch();
+}
+
+//13. Write a program to take a three-digit number from the user and rotate its digits by one position towards the right.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int num,rem,n;
+    printf("enter a three digit number\n");
+    scanf("%d",&num);
+    rem=num%10;
+    n=rem*100+num/10;
+    printf("after rotation of %d by one is %d ",num,n);
+    getch();
+}
+
